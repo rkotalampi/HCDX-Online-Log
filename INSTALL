@@ -1,0 +1,53 @@
+
+HCDX Online Log installation
+
+Requirements:
+	MySQL
+	php
+	Apache
+	Perl
+	Working email delivery out from the box
+
+Steps:
+1) Drop the files to a directory accessable by Apache/PHP
+2) initialize the database (your mileage may vary depending on where your
+   MySQL server is and if it requires a password):
+	mysqladmin create HCDX -p
+	mysql HCDX -p < init_db.sql
+
+	Create db user (or use it with mysql root user):
+	mysqladmin ...
+	grant access rights to tables
+
+3) Edit config.php and config.db.php. Set variables in the top of the file.
+4) Point your web browser to the URL root
+5) Enjoy!
+
+   An example on CentOS 5.3 x86_64 system:
+     Install prequisites (you might have some of these already):
+        yum install mysql
+	yum install php-mysql
+	yum install mysql-server
+	yum install httpd
+	yum install php
+	yum install perl
+	yum install wget
+
+     Copy the tarball:
+        cd /usr/local/src/; wget http://www.hard-core-dx.com/online-log-latest.tar.gz 
+	cd /var/www/html/; tar -xzvf /usr/local/src/online-log-latest.tar.gz; 
+
+     Sorry, there are some bugs and this still needs to run in the web docroot, not subdirectory:
+	mv HCDXOnlineLog/* .
+
+     Start services:
+     	Add to httpd.conf php_value register_globals on
+        /etc/init.d/httpd start
+        /etc/init.d/mysql start
+	/usr/bin/mysqladmin -u root password 'new-password'
+	emacs config.*
+	mysqladmin create HCDX -p
+	mysql HCDX -p < init_db.sql
+	point your browser to the web server root (some extra Apache configs might be needed)
+
+

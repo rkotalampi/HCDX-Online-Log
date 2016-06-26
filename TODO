@@ -1,0 +1,45 @@
+
+HCDX Online Log Future Plans
+----------------------------
+
+Future plans:
+
+2.0.0.0 Release Under GPLv3
+
+	Incorporate the new signup page.
+	Add '+' display feature. Requested by Finnish DXers.
+	Add highlight feature.
+
+2.0.1.1 Search form to include '+' and highlighting option.
+
+2.0.1.2 cleaning up the code, signup order to prefer Finland group
+
+-- we are here 
+
+2.0.2.0 Apply the GPL'd version to log.hard-core-dx.com
+
+2.0.3.0 Add import_log.pl into the mix
+
+Future requests (no milestone set yet):
+- "change password" link
+- user preference edit
+- email notifications of add/change/edit (to "log cop", admin & logger)
+- "log cops": access to edit others' loggings
+- reception quality as optional (SINPO, etc)
+- User profiles: saved advances searches -> email results in intervals
+- Add field to choose fq as MHz or kHz (in db all saved as kHz)
+- add multipage support for more than X logs at a time
+- Email updates to mailing list, DXClusive & Radiomaailma
+- User profile: location, receiver, antenna
+- GUI enhancements
+- User preferences: colors, choose sort fields (novice/advanced)
+- Automatic categorization
+- Output templates
+- Input templates
+- Sorting orders: ASC always on the first time
+- more languages: German, French, Spanish, Italian
+- Scrolling screen with latest logging real time
+- email interface: input logs through email, log output through email
+- Add QSL information
+- Links to station info (WRDB extension)
+- Distributed databases, database synchronization
